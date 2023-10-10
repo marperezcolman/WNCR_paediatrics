@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ee2493c0ec44d6552bc3807e5a3e21a7">
+		["MD5-CAM-1.0.1"] = <"ed1ab6a677a401619455876e4c32720a">
 		["build_uid"] = <"307a7e9f-1cd8-30a0-8b25-571cadc7cc5c">
 	>
 
@@ -138,6 +138,7 @@ ontology
 				["at0000"] = <
 					text = <"WAASP nutritional risk assessment">
 					description = <"WAASP nutritional risk assessment">
+					comment = <"Welsh Health Circular: https://www.gov.wales/sites/default/files/publications/2019-08/nationally-standardised-adult-inpatient-assessment-and-core-risk-assessments_0.pdf">
 				>
 				["at0001"] = <
 					text = <"History">
