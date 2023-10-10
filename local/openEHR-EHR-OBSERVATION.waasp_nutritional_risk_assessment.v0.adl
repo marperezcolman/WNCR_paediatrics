@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ff45369661b79ce76c84d40ecd17ab05">
+		["MD5-CAM-1.0.1"] = <"74d5cea7c63eba6d14db7f1ed17504ca">
 		["build_uid"] = <"307a7e9f-1cd8-30a0-8b25-571cadc7cc5c">
 	>
 
@@ -41,17 +41,25 @@ definition
 								items cardinality matches {0..*; unordered} matches {
 									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Weight evaluation
 										value matches {
-											DV_ORDINAL matches {*}
+											7|[local::at0018],
+											2|[local::at0019],
+											0|[local::at0020]
 										}
 									}
 									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Appetite evaluation
 										value matches {
-											DV_ORDINAL matches {*}
+											4|[local::at0021],
+											3|[local::at0022],
+											1|[local::at0023],
+											0|[local::at0024]
 										}
 									}
 									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Ability to eat evaluation
 										value matches {
-											DV_ORDINAL matches {*}
+											7|[local::at0025],
+											4|[local::at0026],
+											1|[local::at0027],
+											0|[local::at0028]
 										}
 									}
 									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Stress factor evaluation
@@ -192,6 +200,50 @@ ontology
 				["at0017"] = <
 					text = <"Decision/Action">
 					description = <"">
+				>
+				["at0018"] = <
+					text = <"Unintentional weight loss of 6 kg or more (1 stone) within last 6 months, extremely thin or cachexic, *BMI < 18.5 kg/m2">
+					description = <"Unintentional weight loss of 6 kg or more (1 stone) within last 6 months, extremely thin or cachexic, *BMI < 18.5 kg/m2">
+				>
+				["at0019"] = <
+					text = <"Unintentional weight loss 3kg (7lb) within last 6 months">
+					description = <"Unintentional weight loss 3kg (7lb) within last 6 months">
+				>
+				["at0020"] = <
+					text = <"No weight loss">
+					description = <"No weight loss">
+				>
+				["at0021"] = <
+					text = <"Little or no appetite or refuses meals and drinks">
+					description = <"Little or no appetite or refuses meals and drinks">
+				>
+				["at0022"] = <
+					text = <"Poor: eating less than a quarter (1/4) of meals and drinks">
+					description = <"Poor: eating less than a quarter (1/4) of meals and drinks">
+				>
+				["at0023"] = <
+					text = <"Reduced: eating half of meals">
+					description = <"Reduced: eating half of meals">
+				>
+				["at0024"] = <
+					text = <"Good: eats 3 meals/day or is fully established on tube feed">
+					description = <"Good: eats 3 meals/day or is fully established on tube feed">
+				>
+				["at0025"] = <
+					text = <"NBM for more than 5 days">
+					description = <"NBM for more than 5 days">
+				>
+				["at0026"] = <
+					text = <"Unable to tolerate food via gastrointestinal tract due to nausea or vomiting, constipation or diarrhoea, difficulty chewing/swallowing">
+					description = <"Unable to tolerate food via gastrointestinal tract due to nausea or vomiting, constipation or diarrhoea, difficulty chewing/swallowing">
+				>
+				["at0027"] = <
+					text = <"Requires prompting, encouragement or assistance to eat and drink">
+					description = <"Requires prompting, encouragement or assistance to eat and drink">
+				>
+				["at0028"] = <
+					text = <"No difficulties, able to eat and drink normally and independently">
+					description = <"No difficulties, able to eat and drink normally and independently">
 				>
 			>
 		>
