@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"74d5cea7c63eba6d14db7f1ed17504ca">
+		["MD5-CAM-1.0.1"] = <"a533fe2b8af831a153df3ff8f8372dbf">
 		["build_uid"] = <"307a7e9f-1cd8-30a0-8b25-571cadc7cc5c">
 	>
 
@@ -64,7 +64,10 @@ definition
 									}
 									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Stress factor evaluation
 										value matches {
-											DV_ORDINAL matches {*}
+											7|[local::at0029],
+											4|[local::at0030],
+											2|[local::at0031],
+											0|[local::at0032]
 										}
 									}
 									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Pressure ulcer/wound evaluation
@@ -244,6 +247,22 @@ ontology
 				["at0028"] = <
 					text = <"No difficulties, able to eat and drink normally and independently">
 					description = <"No difficulties, able to eat and drink normally and independently">
+				>
+				["at0029"] = <
+					text = <"Upper GI cancer (pre/post-surgery), extensive bowel resection, high output stoma/fistula. Head & neck cancer surgery, both kidney & pancreatic or Bone Marrow transplants, Mixed depth burns (>20%)">
+					description = <"Upper GI cancer (pre/post-surgery), extensive bowel resection, high output stoma/fistula. Head & neck cancer surgery, both kidney & pancreatic or Bone Marrow transplants, Mixed depth burns (>20%)">
+				>
+				["at0030"] = <
+					text = <"Moderate surgery e.g. cardiothoracic, kidney transplant, vascular. Malignant disease with complication e.g. infection. Recent multiple injuries e.g. spinal injury/trauma, head injury, GBS. Bowel surgery (uncomplicated), liver disease (decompensated), Kidney e.g. acute kidney injury, renal replacement therapy (HD/PD). Severe infection e.g. sepsis, endocarditis, pneumonia, peritonitis. Pancreatitis (acute & chronic), HIV, Burns (15-20% mixed depth).">
+					description = <"Moderate surgery e.g. cardiothoracic, kidney transplant, vascular. Malignant disease with complication e.g. infection. Recent multiple injuries e.g. spinal injury/trauma, head injury, GBS. Bowel surgery (uncomplicated), liver disease (decompensated), Kidney e.g. acute kidney injury, renal replacement therapy (HD/PD). Severe infection e.g. sepsis, endocarditis, pneumonia, peritonitis. Pancreatitis (acute & chronic), HIV, Burns (15-20% mixed depth).">
+				>
+				["at0031"] = <
+					text = <"Progressive disorders e.g. MND, MS, Parkinson’s, dementia, heart failure, COPD). Stroke.  Fractured neck of femur, inflammatory bowel disease. Uncomplicated /stable malignant disease, 10-15% mixed depth burn">
+					description = <"Progressive disorders e.g. MND, MS, Parkinson’s, dementia, heart failure, COPD). Stroke.  Fractured neck of femur, inflammatory bowel disease. Uncomplicated /stable malignant disease, 10-15% mixed depth burn">
+				>
+				["at0032"] = <
+					text = <"Uncomplicated condition with no interruption in food intake e.g. MI">
+					description = <"Uncomplicated condition with no interruption in food intake e.g. MI">
 				>
 			>
 		>
