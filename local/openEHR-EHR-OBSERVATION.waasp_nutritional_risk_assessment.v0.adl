@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a533fe2b8af831a153df3ff8f8372dbf">
+		["MD5-CAM-1.0.1"] = <"ee2493c0ec44d6552bc3807e5a3e21a7">
 		["build_uid"] = <"307a7e9f-1cd8-30a0-8b25-571cadc7cc5c">
 	>
 
@@ -72,7 +72,10 @@ definition
 									}
 									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Pressure ulcer/wound evaluation
 										value matches {
-											DV_ORDINAL matches {*}
+											7|[local::at0033],
+											4|[local::at0034],
+											2|[local::at0035],
+											0|[local::at0036]
 										}
 									}
 									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Total score
@@ -263,6 +266,22 @@ ontology
 				["at0032"] = <
 					text = <"Uncomplicated condition with no interruption in food intake e.g. MI">
 					description = <"Uncomplicated condition with no interruption in food intake e.g. MI">
+				>
+				["at0033"] = <
+					text = <"Cat 4 pressure ulcer or open abdomen">
+					description = <"Cat 4 pressure ulcer or open abdomen">
+				>
+				["at0034"] = <
+					text = <"Cat 3 pressure ulcer or dehisced/infected/moderate exudate wound">
+					description = <"Cat 3 pressure ulcer or dehisced/infected/moderate exudate wound">
+				>
+				["at0035"] = <
+					text = <"Cat 1-2 pressure ulcer or non-healing/low level exudate wound">
+					description = <"Cat 1-2 pressure ulcer or non-healing/low level exudate wound">
+				>
+				["at0036"] = <
+					text = <"Pressure areas intact, healing or healthy wound">
+					description = <"Pressure areas intact, healing or healthy wound">
 				>
 			>
 		>
