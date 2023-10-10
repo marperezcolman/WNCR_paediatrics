@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"951cc8260f28c495f5f7850e17b8b4ea">
+		["MD5-CAM-1.0.1"] = <"ff45369661b79ce76c84d40ecd17ab05">
 		["build_uid"] = <"307a7e9f-1cd8-30a0-8b25-571cadc7cc5c">
 	>
 
@@ -67,6 +67,11 @@ definition
 									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Total score
 										value matches {
 											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Decision/Action
+										value matches {
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Comment
@@ -182,6 +187,10 @@ ontology
 				>
 				["at0016"] = <
 					text = <"Confounding factors">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Decision/Action">
 					description = <"">
 				>
 			>
