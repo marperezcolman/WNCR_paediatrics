@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"efeca9c3caa77a91a1e59d20027564ac">
+		["MD5-CAM-1.0.1"] = <"f34cac0db48adcce204b078d55934587">
 		["build_uid"] = <"14e27f79-78fa-3091-850c-3ab2e5ba3cfc">
 	>
 
@@ -49,7 +49,17 @@ definition
 			}
 			ELEMENT[at0006] occurrences matches {0..1} matches {    -- PU category
 				value matches {
-					DV_CODED_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0010,    -- Cat 1 - Non-blanchable redness of intact skin
+							at0011,    -- Cat 2 - Partial thickness skin loss or clear blister
+							at0012,    -- Cat 3 - Full thickness skin loss (fat visible/slough present)
+							at0013,    -- Cat 4 - Full thickness tissue loss (muscle/bone visible)
+							at0014,    -- Cat U - (Unstageable/Unclassified): Full thickness skin or tissue loss - depth unknown
+							at0015]    -- Cat SDTI - (Depth unknown): Purple localised area of discoloured intact skin or blood-filled blister
+						}
+					}
 				}
 			}
 			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Normal skin
@@ -104,6 +114,30 @@ ontology
 				>
 				["at0009"] = <
 					text = <"Comment">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Cat 1 - Non-blanchable redness of intact skin">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Cat 2 - Partial thickness skin loss or clear blister">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Cat 3 - Full thickness skin loss (fat visible/slough present)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Cat 4 - Full thickness tissue loss (muscle/bone visible)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Cat U - (Unstageable/Unclassified): Full thickness skin or tissue loss - depth unknown">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Cat SDTI - (Depth unknown): Purple localised area of discoloured intact skin or blood-filled blister">
 					description = <"">
 				>
 			>
