@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1030bc4dd03667c510ef38f93b67abec">
+		["MD5-CAM-1.0.1"] = <"cc4ede9a3ec5eee474567d1cb8e2726e">
 		["build_uid"] = <"e9ad252b-80c3-31ca-873c-d8b8c0ef0f0b">
 	>
 
@@ -95,22 +95,51 @@ definition
 							}
 							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Sensory perception and response
 								value matches {
-									DV_CODED_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0043,    -- No problem
+											at0044]    -- Patient is unable to feel and/or respond appropriately to discomfort from pressure e.g. CVA, neuropathy, epidural
+										}
+									}
 								}
 							}
 							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Moisture
 								value matches {
-									DV_CODED_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0045,    -- No problem/Occasional
+											at0046,    -- Frequent (2-4 times a day)
+											at0047]    -- Constant
+										}
+									}
 								}
 							}
 							ELEMENT[at0011] occurrences matches {0..*} matches {    -- Pefusion
 								value matches {
-									DV_CODED_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0048,    -- No problem
+											at0049,    -- Conditions affecting central circulation eg. shock, heart failure, hypotension
+											at0050]    -- Conditions affecting peripheral circulation eg. peripheral vascular/arterial disease
+										}
+									}
 								}
 							}
 							ELEMENT[at0012] occurrences matches {0..*} matches {    -- Nutrition
 								value matches {
-									DV_CODED_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0051,    -- No problem
+											at0052,    -- Unplanned weight loss
+											at0053,    -- Poor nutritional intake
+											at0054,    -- Low BMI (less than 18.5)
+											at0055]    -- High BMI (30 or more)
+										}
+									}
 								}
 							}
 							ELEMENT[at0013] occurrences matches {0..1} matches {    -- Medical device
@@ -365,6 +394,58 @@ ontology
 				>
 				["at0042"] = <
 					text = <"Frequency: Moves frequently & Extent: Major position changes">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"No problem">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Patient is unable to feel and/or respond appropriately to discomfort from pressure e.g. CVA, neuropathy, epidural">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"No problem/Occasional">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Frequent (2-4 times a day)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Constant">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"No problem">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Conditions affecting central circulation eg. shock, heart failure, hypotension">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Conditions affecting peripheral circulation eg. peripheral vascular/arterial disease">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"No problem">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Unplanned weight loss">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Poor nutritional intake">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Low BMI (less than 18.5)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"High BMI (30 or more)">
 					description = <"">
 				>
 			>
