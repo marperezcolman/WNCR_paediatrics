@@ -1,0 +1,111 @@
+archetype (adl_version=1.4; uid=861d3f07-dbc4-4d9f-ad70-574805bb12ae)
+	openEHR-EHR-CLUSTER.purpose_t_skin_assessment.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-10-25">
+		["name"] = <"Marlene Pérez Colman">
+		["organisation"] = <"Digital Health and Care Wales">
+		["email"] = <"marlene.perezcolman@wales.nhs.uk">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"efeca9c3caa77a91a1e59d20027564ac">
+		["build_uid"] = <"14e27f79-78fa-3091-850c-3ab2e5ba3cfc">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- PURPOSE T Skin assessment
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {    -- Anatomical site
+				include
+					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Pain
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Vulnerable skin
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- PU category
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Normal skin
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Refused assessment
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"PURPOSE T Skin assessment">
+					description = <"PURPOSE T Skin assessment">
+				>
+				["at0002"] = <
+					text = <"Anatomical site">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Pain">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Vulnerable skin">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"PU category">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Normal skin">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Refused assessment">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Comment">
+					description = <"">
+				>
+			>
+		>
+	>
