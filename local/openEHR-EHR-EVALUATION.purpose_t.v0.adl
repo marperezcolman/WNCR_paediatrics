@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e23f6ba71ec9beeffa41c6205565ff55">
+		["MD5-CAM-1.0.1"] = <"1030bc4dd03667c510ef38f93b67abec">
 		["build_uid"] = <"e9ad252b-80c3-31ca-873c-d8b8c0ef0f0b">
 	>
 
@@ -39,17 +39,40 @@ definition
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0004] occurrences matches {0..*} matches {    -- Mobility status
 								value matches {
-									DV_CODED_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0027,    -- Needs the help of another person to walk
+											at0028,    -- Spends all or the majority of time in bed or chair
+											at0029,    -- Remains in the same position for long periods
+											at0030]    -- Walks independently with or without walking aids
+										}
+									}
 								}
 							}
 							ELEMENT[at0005] occurrences matches {0..*} matches {    -- Skin status
 								value matches {
-									DV_CODED_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0031,    -- Current PU category 1 or above?
+											at0032,    -- Reported history of previous PU?
+											at0033,    -- Vulnerable skin
+											at0034,    -- Medical device causing pressure/shear at skin site e.g. O2 mask, NG tube
+											at0035]    -- Normal skin
+										}
+									}
 								}
 							}
 							ELEMENT[at0006] occurrences matches {0..*} matches {    -- Clinical judgement
 								value matches {
-									DV_CODED_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0036,    -- Conditions/treatments which significantly impact the patient's PU risk e.g. poor perfusion, epidurals, oedema, steroids.
+											at0037]    -- No problem
+										}
+									}
 								}
 							}
 						}
@@ -58,7 +81,16 @@ definition
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0008] occurrences matches {0..1} matches {    -- Analysis of independent movement
 								value matches {
-									DV_CODED_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0038,    -- Frequency: Doesn't move & Extent: Doesn't move
+											at0039,    -- Frequency: Moves occasionally & Extent: slight position changes
+											at0040,    -- Frequency: Moves occasionally & Extent: Major position changes
+											at0041,    -- Frequency: Moves frequently & Extent: Slight position changes
+											at0042]    -- Frequency: Moves frequently & Extent: Major position changes
+										}
+									}
 								}
 							}
 							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Sensory perception and response
@@ -269,6 +301,70 @@ ontology
 				>
 				["at0026"] = <
 					text = <"Comment">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Needs the help of another person to walk">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Spends all or the majority of time in bed or chair">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Remains in the same position for long periods">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Walks independently with or without walking aids">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Current PU category 1 or above?">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Reported history of previous PU?">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Vulnerable skin">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Medical device causing pressure/shear at skin site e.g. O2 mask, NG tube">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Normal skin">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Conditions/treatments which significantly impact the patient's PU risk e.g. poor perfusion, epidurals, oedema, steroids.">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"No problem">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Frequency: Doesn't move & Extent: Doesn't move">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Frequency: Moves occasionally & Extent: slight position changes">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Frequency: Moves occasionally & Extent: Major position changes">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Frequency: Moves frequently & Extent: Slight position changes">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Frequency: Moves frequently & Extent: Major position changes">
 					description = <"">
 				>
 			>
