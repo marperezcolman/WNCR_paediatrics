@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f34cac0db48adcce204b078d55934587">
+		["MD5-CAM-1.0.1"] = <"17c3087b780db810d6ebb3455a246c1d">
 		["build_uid"] = <"14e27f79-78fa-3091-850c-3ab2e5ba3cfc">
 	>
 
@@ -36,6 +36,11 @@ definition
 			allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {    -- Anatomical site
 				include
 					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[at0016] occurrences matches {0..1} matches {    -- Anatomical location
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
 			}
 			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Pain
 				value matches {
@@ -138,6 +143,10 @@ ontology
 				>
 				["at0015"] = <
 					text = <"Cat SDTI - (Depth unknown): Purple localised area of discoloured intact skin or blood-filled blister">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Anatomical location">
 					description = <"">
 				>
 			>
