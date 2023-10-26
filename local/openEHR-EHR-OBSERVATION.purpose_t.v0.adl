@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"996d1b88450a19b6a81bb3bc0a6a5d1b">
+		["MD5-CAM-1.0.1"] = <"13fe28403f52560d6db8f35c25b5c1e1">
 		["build_uid"] = <"1bc93227-a3ad-3ad6-a998-e5ce932ea170">
 	>
 
@@ -37,76 +37,16 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
-						}
-					}
-				}
-			}
-		}
-		protocol matches {
-			ITEM_TREE[at0004] matches {    -- Item tree
-				items cardinality matches {0..*; unordered} matches {
-					CLUSTER[at0005] occurrences matches {0..1} matches {    -- Step 1 - Screening
-						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0008] occurrences matches {0..1} matches {    -- Mobility Status
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Skin Status
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Clinical Judgement
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-						}
-					}
-					CLUSTER[at0006] occurrences matches {0..1} matches {    -- Step 2 - Full Assessment
-						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0011] occurrences matches {0..1} matches {    -- Analysis of independent movement
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0012] occurrences matches {0..1} matches {    -- Sensory perception and response
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0013] occurrences matches {0..1} matches {    -- Moisture
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0014] occurrences matches {0..1} matches {    -- Perfusion
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0015] occurrences matches {0..1} matches {    -- Nutrition
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0016] occurrences matches {0..1} matches {    -- Medical device
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0017] occurrences matches {0..1} matches {    -- Diabetes
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
-							CLUSTER[at0018] occurrences matches {0..*} matches {    -- Current detailed skin assessment
-								items cardinality matches {1..*; unordered} matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
 									allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {    -- Anatomical site
 										include
 											archetype_id/value matches {/.*/}
+									}
+									ELEMENT[at0035] occurrences matches {0..1} matches {    -- Anatomical site
+										value matches {
+											DV_CODED_TEXT matches {*}
+										}
 									}
 									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Pain
 										value matches {
@@ -135,57 +75,13 @@ definition
 									}
 								}
 							}
-							CLUSTER[at0026] occurrences matches {0..1} matches {    -- Previous PU history
-								items cardinality matches {1..*; unordered} matches {
-									ELEMENT[at0027] occurrences matches {0..1} matches {    -- Previous PU history
-										value matches {
-											DV_CODED_TEXT matches {*}
-										}
-									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Number of previous pressure ulcer(s)
-										value matches {
-											DV_COUNT matches {*}
-										}
-									}
-									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Date
-										value matches {
-											DV_DATE_TIME matches {*}
-										}
-									}
-									allow_archetype CLUSTER[at0030] occurrences matches {0..*} matches {    -- Anatomical site
-										include
-											archetype_id/value matches {/.*/}
-									}
-									ELEMENT[at0031] occurrences matches {0..1} matches {    -- PU Category
-										value matches {
-											DV_CODED_TEXT matches {*}
-										}
-									}
-									ELEMENT[at0032] occurrences matches {0..1} matches {    -- Scar
-										value matches {
-											DV_CODED_TEXT matches {*}
-										}
-									}
-									ELEMENT[at0033] occurrences matches {0..1} matches {    -- Other relevant information
-										value matches {
-											DV_TEXT matches {*}
-										}
-									}
-								}
-							}
-						}
-					}
-					CLUSTER[at0007] occurrences matches {0..1} matches {    -- Step 3 - Assessment decision
-						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0034] occurrences matches {0..1} matches {    -- Decision
-								value matches {
-									DV_CODED_TEXT matches {*}
-								}
-							}
 						}
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- Item tree
 		}
 	}
 
@@ -213,62 +109,6 @@ ontology
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
-				["at0005"] = <
-					text = <"Step 1 - Screening">
-					description = <"">
-				>
-				["at0006"] = <
-					text = <"Step 2 - Full Assessment">
-					description = <"">
-				>
-				["at0007"] = <
-					text = <"Step 3 - Assessment decision">
-					description = <"">
-				>
-				["at0008"] = <
-					text = <"Mobility Status">
-					description = <"">
-				>
-				["at0009"] = <
-					text = <"Skin Status">
-					description = <"">
-				>
-				["at0010"] = <
-					text = <"Clinical Judgement">
-					description = <"">
-				>
-				["at0011"] = <
-					text = <"Analysis of independent movement">
-					description = <"">
-				>
-				["at0012"] = <
-					text = <"Sensory perception and response">
-					description = <"">
-				>
-				["at0013"] = <
-					text = <"Moisture">
-					description = <"">
-				>
-				["at0014"] = <
-					text = <"Perfusion">
-					description = <"">
-				>
-				["at0015"] = <
-					text = <"Nutrition">
-					description = <"">
-				>
-				["at0016"] = <
-					text = <"Medical device">
-					description = <"">
-				>
-				["at0017"] = <
-					text = <"Diabetes">
-					description = <"">
-				>
-				["at0018"] = <
-					text = <"Current detailed skin assessment">
-					description = <"">
-				>
 				["at0019"] = <
 					text = <"Anatomical site">
 					description = <"">
@@ -293,40 +133,8 @@ ontology
 					text = <"Refused assessment">
 					description = <"">
 				>
-				["at0026"] = <
-					text = <"Previous PU history">
-					description = <"">
-				>
-				["at0027"] = <
-					text = <"Previous PU history">
-					description = <"">
-				>
-				["at0028"] = <
-					text = <"Number of previous pressure ulcer(s)">
-					description = <"">
-				>
-				["at0029"] = <
-					text = <"Date">
-					description = <"">
-				>
-				["at0030"] = <
+				["at0035"] = <
 					text = <"Anatomical site">
-					description = <"">
-				>
-				["at0031"] = <
-					text = <"PU Category">
-					description = <"">
-				>
-				["at0032"] = <
-					text = <"Scar">
-					description = <"">
-				>
-				["at0033"] = <
-					text = <"Other relevant information">
-					description = <"">
-				>
-				["at0034"] = <
-					text = <"Decision">
 					description = <"">
 				>
 			>
