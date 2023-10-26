@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"13fe28403f52560d6db8f35c25b5c1e1">
+		["MD5-CAM-1.0.1"] = <"15044019d28cd0e7b3b6c596bc8f77f4">
 		["build_uid"] = <"1bc93227-a3ad-3ad6-a998-e5ce932ea170">
 	>
 
@@ -39,10 +39,6 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {    -- Anatomical site
-										include
-											archetype_id/value matches {/.*/}
-									}
 									ELEMENT[at0035] occurrences matches {0..1} matches {    -- Anatomical site
 										value matches {
 											DV_CODED_TEXT matches {*}
@@ -66,6 +62,11 @@ definition
 									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Normal skin
 										value matches {
 											DV_BOOLEAN matches {*}
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Decision/Assessment
+										value matches {
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									ELEMENT[at0024] occurrences matches {0..1} matches {    -- Refused assessment
@@ -109,10 +110,6 @@ ontology
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
-				["at0019"] = <
-					text = <"Anatomical site">
-					description = <"">
-				>
 				["at0020"] = <
 					text = <"Pain">
 					description = <"">
@@ -135,6 +132,10 @@ ontology
 				>
 				["at0035"] = <
 					text = <"Anatomical site">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Decision/Assessment">
 					description = <"">
 				>
 			>
