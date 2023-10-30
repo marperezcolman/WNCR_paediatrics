@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7905a61655adecec0107dd9a4b5fa294">
+		["MD5-CAM-1.0.1"] = <"4531efc31ef2ec64e006f4f8383bb77e">
 		["build_uid"] = <"6f12726c-d166-3f15-8540-d0e730b856ef">
 	>
 
@@ -35,9 +35,62 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- PU history
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0004,    -- No known PU history
+									at0005]    -- PU history
+								}
+							}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Number of previous pressure ulcer(s)
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
 					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Approximate date
 						value matches {
 							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Body site
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- PU category
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0009,    -- Category 1
+									at0010,    -- Category 2
+									at0011,    -- Category 3
+									at0012,    -- Category 4
+									at0013,    -- Category U (Unstageable/Unclassified)
+									at0014]    -- Category SDTI: Suspected Deep Tissue Injury (Depth Unknown)
+								}
+							}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Scar
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0016,    -- Yes
+									at0017]    -- No
+								}
+							}
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches {    -- Other relevant information
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 				}
@@ -59,6 +112,70 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Approximate date">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"PU history">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"No known PU history">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"PU history">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Number of previous pressure ulcer(s)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Body site">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"PU category">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Category 1">
+					description = <"Non-blanchable redness of intact skin">
+				>
+				["at0010"] = <
+					text = <"Category 2">
+					description = <"Partial thickness loss or clear blister">
+				>
+				["at0011"] = <
+					text = <"Category 3">
+					description = <"Full thickness skin loss (fat visible/slough present)">
+				>
+				["at0012"] = <
+					text = <"Category 4">
+					description = <"Full thickness tissue loss (muscle/bone visible)">
+				>
+				["at0013"] = <
+					text = <"Category U (Unstageable/Unclassified)">
+					description = <"Full thickness skin or tissue loss - depth unknown">
+				>
+				["at0014"] = <
+					text = <"Category SDTI: Suspected Deep Tissue Injury (Depth Unknown)">
+					description = <"Purple localised area of discoloured intact skin or blood-filled blister">
+				>
+				["at0015"] = <
+					text = <"Scar">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Yes">
+					description = <"Present">
+				>
+				["at0017"] = <
+					text = <"No">
+					description = <"Absent">
+				>
+				["at0018"] = <
+					text = <"Other relevant information">
 					description = <"">
 				>
 			>
