@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"15044019d28cd0e7b3b6c596bc8f77f4">
+		["MD5-CAM-1.0.1"] = <"fc166f4620bcc49f9f119d78451b4ba4">
 		["build_uid"] = <"1bc93227-a3ad-3ad6-a998-e5ce932ea170">
 	>
 
@@ -39,7 +39,7 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0035] occurrences matches {0..1} matches {    -- Anatomical site
+									ELEMENT[at0035] occurrences matches {0..1} matches {    -- Skin (anatomical) site
 										value matches {
 											DV_CODED_TEXT matches {*}
 										}
@@ -56,7 +56,17 @@ definition
 									}
 									ELEMENT[at0022] occurrences matches {0..1} matches {    -- PU category
 										value matches {
-											DV_CODED_TEXT matches {*}
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0037,    -- Category 1
+													at0038,    -- Category 2
+													at0039,    -- Category 3
+													at0040,    -- Category 4
+													at0041,    -- Category U (Unstageable/Unclassified)
+													at0042]    -- Category SDTI: Suspected Deep Tissue Injury (Depth Unknown)
+												}
+											}
 										}
 									}
 									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Normal skin
@@ -64,14 +74,14 @@ definition
 											DV_BOOLEAN matches {*}
 										}
 									}
-									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Decision/Assessment
-										value matches {
-											DV_CODED_TEXT matches {*}
-										}
-									}
 									ELEMENT[at0024] occurrences matches {0..1} matches {    -- Refused assessment
 										value matches {
 											DV_BOOLEAN matches {*}
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Decision/Assessment
+										value matches {
+											DV_CODED_TEXT matches {*}
 										}
 									}
 								}
@@ -131,12 +141,36 @@ ontology
 					description = <"">
 				>
 				["at0035"] = <
-					text = <"Anatomical site">
+					text = <"Skin (anatomical) site">
 					description = <"">
 				>
 				["at0036"] = <
 					text = <"Decision/Assessment">
 					description = <"">
+				>
+				["at0037"] = <
+					text = <"Category 1">
+					description = <"Non-blanchable redness of intact skin">
+				>
+				["at0038"] = <
+					text = <"Category 2">
+					description = <"Partial thickness loss or clear blister">
+				>
+				["at0039"] = <
+					text = <"Category 3">
+					description = <"Full thickness skin loss (fat visible/slough present)">
+				>
+				["at0040"] = <
+					text = <"Category 4">
+					description = <"Full thickness tissue loss (muscle/bone visible)">
+				>
+				["at0041"] = <
+					text = <"Category U (Unstageable/Unclassified)">
+					description = <"Full thickness skin or tissue loss - depth unknown">
+				>
+				["at0042"] = <
+					text = <"Category SDTI: Suspected Deep Tissue Injury (Depth Unknown)">
+					description = <"Purple localised area of discoloured intact skin or blood-filled blister">
 				>
 			>
 		>
