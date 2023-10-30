@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.5.0",
+      "sem_ver" : "0.5.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "ed114a33b2cb3b29f81e4b830539736c",
+      "MD5-CAM-1.0.1" : "95258e76206cf8d6a44bd5bd8a7025d3",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -7204,6 +7204,50 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0035.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "defaultValue" : {
+                            "defining_code" : {
+                              "terminology_id" : {
+                                "value" : "SCT",
+                                "@type" : "TERMINOLOGY_ID"
+                              },
+                              "code_string" : "46452000",
+                              "@type" : "CODE_PHRASE"
+                            },
+                            "value" : "Sacral region back structure (body structure)",
+                            "@type" : "DV_CODED_TEXT"
+                          },
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "terminologyId" : {
+                                "value" : "SCT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SCT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SCT",
+                                "code" : "46452000",
+                                "value" : "Sacral region back structure (body structure)"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0036.1",
                       "attributes" : [ {
@@ -7525,6 +7569,12 @@
             "code" : "at0002.14",
             "text" : "Add site",
             "description" : "@ internal @"
+          },
+          "at0035.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0035.1",
+            "text" : "Sacrum",
+            "description" : ""
           }
         }
       },
