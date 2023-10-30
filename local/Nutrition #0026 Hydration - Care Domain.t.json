@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.5.0",
+      "sem_ver" : "0.6.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "6025aa60a450d8511eb37ec512704dc2",
+      "MD5-CAM-1.0.1" : "fe1cf8ecc4ffd75ebcbaa42f97e7aa6c",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -1223,7 +1223,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4716FC98A106AB9A4253294859C1B769"
+        "PARENT:MD5-CAM-1.0.1" : "EB65BCD42CDD13FD038AF8637097AAFE"
       },
       "details" : {
         "de" : {
@@ -1558,18 +1558,6 @@
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
                               "occurrences" : "1..1",
-                              "defaultValue" : {
-                                "defining_code" : {
-                                  "terminology_id" : {
-                                    "value" : "SCT",
-                                    "@type" : "TERMINOLOGY_ID"
-                                  },
-                                  "code_string" : "325251000000106",
-                                  "@type" : "CODE_PHRASE"
-                                },
-                                "value" : "Dietary supplement (substance)",
-                                "@type" : "DV_CODED_TEXT"
-                              },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
@@ -1584,12 +1572,8 @@
                                   "selectedTerminologies" : [ "SCT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SCT",
-                                    "code" : "325251000000106",
-                                    "value" : "Dietary supplement (substance)"
-                                  }, {
-                                    "terminologyId" : "SCT",
-                                    "code" : "284655007",
-                                    "value" : "Dietary requirement finding (finding)"
+                                    "code" : "568331000005101",
+                                    "value" : "Intake of nutritional supplement (observable entity)"
                                   } ]
                                 } ]
                               } ],
