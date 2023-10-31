@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.9.2",
+      "sem_ver" : "0.9.3",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "4ade1b3bbe80f72e164dba2bb140e176",
+      "MD5-CAM-1.0.1" : "e0e81607987ea72b346bb914472edac2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -526,12 +526,30 @@
                     "rmAttributeName" : "defining_code",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "CODE_PHRASE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "1..1",
                       "terminologyId" : {
-                        "value" : "local"
+                        "value" : "local_terms"
                       },
-                      "constraint" : [ "at0014", "at0015", "at0016", "at0017", "at0018" ]
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms",
+                        "code" : "1",
+                        "value" : "Needs the help of another person to walk"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "2",
+                        "value" : "Spends all or the majority of time in bed or chair"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "3",
+                        "value" : "Remains in the same position for long periods"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "0",
+                        "value" : "Walks independently with or without walking aids"
+                      } ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -683,6 +701,21 @@
         "ac0.17" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.17",
+          "members" : [ ]
+        },
+        "ac0.19" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.19",
+          "members" : [ "at0014", "at0015", "at0016", "at0017", "at0018" ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
+          "members" : [ ]
+        },
+        "ac0.21" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.21",
           "members" : [ ]
         }
       }
