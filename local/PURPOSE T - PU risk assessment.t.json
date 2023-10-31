@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.9.1",
+      "sem_ver" : "0.9.2",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "b1bcced8aaecb0de24a72265f795291f",
+      "MD5-CAM-1.0.1" : "4ade1b3bbe80f72e164dba2bb140e176",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -9640,34 +9640,12 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..1",
                       "nodeId" : "at0028.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "value",
                         "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.1" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_BOOLEAN",
                           "attributes" : [ ],
@@ -10155,12 +10133,6 @@
             "description" : "Series of questions and associated answers used to screen for issues, problems or diagnoses.",
             "comment" : "The answers may be self-reported."
           },
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0022.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
@@ -10222,12 +10194,6 @@
             "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge bekymringer, plager, problemer eller diagnoser.",
             "comment" : "Svarene kan være selvrapporterte."
           },
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
@@ -10254,12 +10220,6 @@
             "text" : "Screening-Fragebogen zum Problem/zur Diagnose (2)",
             "description" : "Eine Reihe von Fragen und zugehörigen Antworten, die zum Screening auf Vorhandensein von Beschwerden, Problemen oder Diagnosen verwendet werden.",
             "comment" : "Die Antworten können selbst berichtet werden."
-          },
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
           },
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
@@ -10288,12 +10248,6 @@
             "description" : "*Series of questions and associated answers used to screen for issues, problems or diagnoses. (en)",
             "comment" : "*The answers may be self-reported.(en)"
           },
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
@@ -10320,6 +10274,11 @@
         "ac0.1" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.1",
+          "members" : [ "at0031", "at0032" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
           "members" : [ "at0031", "at0032" ]
         }
       }
