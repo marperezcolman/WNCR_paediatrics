@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.10.1",
+      "sem_ver" : "0.10.2",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "826f0237ae09b30b23730cbd75319ed7",
+      "MD5-CAM-1.0.1" : "c896b372b61058013812fa64915f9d41",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -5376,19 +5376,7 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "CODE_PHRASE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "at0023", "at0024", "at0027" ]
-                                } ]
-                              } ],
+                              "attributes" : [ ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -5491,19 +5479,7 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "CODE_PHRASE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "at0023", "at0024", "at0027" ]
-                                } ]
-                              } ],
+                              "attributes" : [ ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -5726,6 +5702,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.14",
           "members" : [ ]
+        },
+        "ac0.16" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.16",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.18",
+          "members" : [ "at0023", "at0024", "at0027" ]
         }
       }
     },
@@ -10394,7 +10380,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "ceaffa665ca009c8959d2c6f9d4670d0"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.purpose_t_mobility_status.v0",
     "differential" : true,
