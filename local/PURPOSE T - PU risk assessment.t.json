@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.10.3",
+      "sem_ver" : "0.11.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "af1ea60c3a1abd9ae632f6147197ac85",
+      "MD5-CAM-1.0.1" : "d23733f10a755da307ab833291c8e5c9",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -5343,6 +5343,18 @@
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
                               "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "SCT",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "16514006",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Moist skin (finding)",
+                                "@type" : "DV_CODED_TEXT"
+                              },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
@@ -5376,7 +5388,19 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "CODE_PHRASE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "at0023", "at0024", "at0027" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -5491,7 +5515,19 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "CODE_PHRASE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "at0023", "at0024", "at0027" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -5677,6 +5713,13 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.4",
             "text" : "Peripheral circulatory problems",
+            "description" : "Identification of a specific symptom or sign or grouping of symptoms or signs, by name.",
+            "comment" : "Coding of the 'Symptom/sign name' with a terminology is preferred, where possible."
+          },
+          "at0004.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.2",
+            "text" : "Moisture",
             "description" : "Identification of a specific symptom or sign or grouping of symptoms or signs, by name.",
             "comment" : "Coding of the 'Symptom/sign name' with a terminology is preferred, where possible."
           }
